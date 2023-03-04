@@ -1,4 +1,7 @@
 import styled from "styled-components"
+import "./Header.css"
+import logo from "../../img/logo.svg"
+import { BsBag } from "react-icons/bs" 
 import BurgerButton from "../BurgerButton/BurgerButton";
 import { useEffect, useState } from "react";
 
@@ -25,9 +28,9 @@ const Header = () => {
             <div className="burger">
             <BurgerButton clicked={clicked} handleClick={handleClick}/>
             </div>
-            <h1>Le<span>Rosalie</span></h1>
-            <div className="cart" style={{color: "white"}}>
-            Cart
+            <img src={logo} alt="logo lerosalie"/>
+            <div className="cart">
+              <BsBag size={30}/>
             </div>
             <div className={`links ${clicked ? "active" : ""}`}>
               <a href="#h" onClick={handleClick}>Link 1</a>
@@ -46,14 +49,9 @@ const Header = () => {
 export default Header
 
 const NavContainer = styled.nav`
-  h1{
-    font-weight: 400;
-    color: white;
-    span{
-      font-weight: bold;
-    }
+  img{
+    padding: 0.5rem;
   }
-  padding: .4rem;
   background-color: #333;
   display: flex;
   align-items: center;
@@ -108,6 +106,10 @@ const NavContainer = styled.nav`
     @media(min-width: 768px){
       display: none;
     }
+  }
+  .cart{
+    margin-right: 1rem;
+    color: white;
   }
 `;
 
