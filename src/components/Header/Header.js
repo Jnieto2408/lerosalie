@@ -1,29 +1,40 @@
 import styled from "styled-components"
 import BurgerButton from "../BurgerButton/BurgerButton";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 
 
 const Header = () => {
-
   const [clicked, setClicked] = useState(false)
   const handleClick = () => {
     setClicked(!clicked)
   }
+  useEffect(() => {
+    const handleResize = () => {
+      setClicked(false)
+    }
+    window.addEventListener("resize", handleResize)
+    return () => {
+      window.addEventListener("resize",handleResize)
+    } 
+  },[])
     return (
         <>
           <NavContainer>
+            <div className="burger">
+            <BurgerButton clicked={clicked} handleClick={handleClick}/>
+            </div>
             <h1>Le<span>Rosalie</span></h1>
+            <div className="cart" style={{color: "white"}}>
+            Cart
+            </div>
             <div className={`links ${clicked ? "active" : ""}`}>
               <a href="#h" onClick={handleClick}>Link 1</a>
               <a href="#h" onClick={handleClick}>Link 2</a>
               <a href="#h" onClick={handleClick}>Link 3</a>
               <a href="#h" onClick={handleClick}>Link 4</a>
               <a href="#h" onClick={handleClick}>Link 5</a>
-            </div>
-            <div className="burger">
-            <BurgerButton clicked={clicked} handleClick={handleClick}/>
             </div>
             <BgDiv className={`initial ${clicked ? "active" : ""}`}></BgDiv>
           </NavContainer>
