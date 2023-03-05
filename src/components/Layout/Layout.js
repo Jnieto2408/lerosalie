@@ -1,3 +1,4 @@
+import "./layout.css"
 import { Route, Routes } from "react-router-dom"
 import Checkout from "../Checkout/Checkout"
 import Footer from "../Footer/Footer"
@@ -10,7 +11,7 @@ import Item from "../Item/Item"
 
 const Layout = () => {
     return(
-        <div>
+        <div className="layout">
             <Header/>
                 <Routes>
                    <Route path="/" element={<Hero/>}/> 
