@@ -45,7 +45,7 @@ function Header() {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className={`justify-content-end  align-items-center flex-grow-1 pe-3 ${isBurgerMenuVisible ? "offcanvas-navbar" : ""}`}>
+                <Nav className={`justify-content-end  flex-grow-1 pe-3 ${isBurgerMenuVisible ? "offcanvas-navbar" : "align-items-center"}`}>
                   <Nav.Link href="/#h">Inicio</Nav.Link>
                   <Nav.Link href="/#h">Nuestras Rosas</Nav.Link>
                   <Nav.Link href="/#h">Preguntas Frecuentes</Nav.Link>
