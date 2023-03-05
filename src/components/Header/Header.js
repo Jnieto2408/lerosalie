@@ -24,8 +24,8 @@ function Header() {
   return (
     <Navbar key="lg" expand="lg" bg="dark" variant="dark" sticky='top'>
       <Container fluid>
-        <Navbar.Brand href="#home"><img src={logo} alt="LeRosalie Logo"></img></Navbar.Brand>
-        <Navbar.Toggle aria-controls="offcanvasNavbar-expand-lg" />
+        <Navbar.Brand href="#home"><img src={logo} alt="LeRosalie Logo" className='logo-rosalie'></img></Navbar.Brand>
+        <Navbar.Toggle aria-controls="offcanvasNavbar-expand-lg" className='burger-icon'/>
           <Navbar.Offcanvas
             id="offcanvasNavbar-expand-lg"
             aria-labelledby="offcanvasNavbarLabel-expand-lg"
