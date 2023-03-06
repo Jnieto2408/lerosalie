@@ -8,7 +8,7 @@ import { BsWhatsapp, BsTiktok, BsInstagram, BsBag } from "react-icons/bs";
 import { useState, useEffect } from 'react';
 
 function Header() {
-  const [isBurgerMenuVisible, setIsBurgerMenuVisible] = useState(false);
+  const [isBurgerMenuVisible, setIsBurgerMenuVisible] = useState(null);
   useEffect(() => {
     const handleResize = () => {
       setIsBurgerMenuVisible(window.innerWidth <= 991);
@@ -29,7 +29,7 @@ function Header() {
           {
             isBurgerMenuVisible && (
               <div className='cart'>
-                <BsBag size={25}/>
+                <BsBag size={25}/><sup>(1)</sup>
               </div>
             )
           }
@@ -38,6 +38,7 @@ function Header() {
               id="offcanvasNavbar-expand-lg"
               aria-labelledby="offcanvasNavbarLabel-expand-lg"
               placement="end"
+              className="burger-icon"
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id="offcanvasNavbarLabel-expand-lg">
@@ -48,13 +49,13 @@ function Header() {
                 <Nav className={`justify-content-end  flex-grow-1 pe-3 ${isBurgerMenuVisible ? "offcanvas-navbar" : "align-items-center"}`}>
                   <Nav.Link href="/#h">Inicio</Nav.Link>
                   <Nav.Link href="/#h">Nuestras Rosas</Nav.Link>
-                  <Nav.Link href="/#h">Preguntas Frecuentes</Nav.Link>
                   <Nav.Link href="/#h">Quienes Somos</Nav.Link>
+                  <Nav.Link href="/#h">Preguntas Frecuentes</Nav.Link>
                   <Nav.Link href="/#h">Contacto</Nav.Link>
                 {
                   !isBurgerMenuVisible && (
                     <div className='cart m-3'>
-                      <BsBag size={25}/>
+                      <BsBag size={25}/><sup>(1)</sup>
                     </div>
                   )
                 }

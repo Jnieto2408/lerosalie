@@ -4,7 +4,7 @@ import Checkout from "../Checkout/Checkout"
 import Footer from "../Footer/Footer"
 import Cart from "../Cart/Cart"
 import Header from "../Header/Header"
-import Hero from "../Hero/Hero"
+import Carousel from "../Carousel/Carousel"
 import Item from "../Item/Item"
 
 
@@ -14,7 +14,7 @@ const Layout = () => {
         <div className="layout">
             <Header/>
                 <Routes>
-                   <Route path="/" element={<Hero/>}/> 
+                   <Route path="/" element={<Carousel/>}/> 
                    <Route path="/cart" element={<Cart/>} />
                    <Route path="/item" element={<Item/>} />
                    <Route path="/checkout" element={<Checkout/>} />
