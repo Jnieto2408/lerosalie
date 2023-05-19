@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import logo from "../../assets/logo.svg"
 import "./header.css"
-import { BsWhatsapp, BsTiktok, BsInstagram, BsBag } from "react-icons/bs";
+import { BsWhatsapp, BsTiktok, BsInstagram } from "react-icons/bs";
 import { useState, useEffect } from 'react';
 import Cartwidget from '../Cartwidget/Cartwidget';
 
@@ -26,19 +26,19 @@ function Header() {
     <Navbar key="lg" expand="lg" bg="dark" variant="dark" sticky='top'>
       <Container fluid>
         <Container className='d-flex justify-content-around align-items-center'>
-          <Navbar.Brand href="#home"><img src={logo} alt="LeRosalie Logo" className='logo-rosalie'></img></Navbar.Brand>
           {
             isBurgerMenuVisible && (
               <Cartwidget/>
-            )
+              )
           }
+          <Navbar.Brand href="#home"><img src={logo} alt="LeRosalie Logo" className='logo-rosalie'></img></Navbar.Brand>
           <Navbar.Toggle aria-controls="offcanvasNavbar-expand-lg" className='burger-icon' />
           <Navbar.Offcanvas
             id="offcanvasNavbar-expand-lg"
             aria-labelledby="offcanvasNavbarLabel-expand-lg"
             placement="end"
             className="burger-icon"
-          >
+            >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id="offcanvasNavbarLabel-expand-lg">
                 Menu
@@ -51,13 +51,11 @@ function Header() {
                 <Nav.Link href="/#h">Quienes Somos</Nav.Link>
                 <Nav.Link href="/#h">Preguntas Frecuentes</Nav.Link>
                 <Nav.Link href="/#h">Contacto</Nav.Link>
-                {
-                  !isBurgerMenuVisible && (
-                    <div className='cart m-3'>
-                      <BsBag size={25} /><sup>(1)</sup>
-                    </div>
-                  )
-                }
+              {
+                !isBurgerMenuVisible && (
+                  <Cartwidget/>
+                )
+              }
               </Nav>
               {
                 isBurgerMenuVisible && (
