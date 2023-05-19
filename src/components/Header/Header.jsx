@@ -6,6 +6,7 @@ import logo from "../../assets/logo.svg"
 import "./header.css"
 import { BsWhatsapp, BsTiktok, BsInstagram, BsBag } from "react-icons/bs";
 import { useState, useEffect } from 'react';
+import Cartwidget from '../Cartwidget/Cartwidget';
 
 function Header() {
   const [isBurgerMenuVisible, setIsBurgerMenuVisible] = useState(null);
@@ -28,9 +29,7 @@ function Header() {
           <Navbar.Brand href="#home"><img src={logo} alt="LeRosalie Logo" className='logo-rosalie'></img></Navbar.Brand>
           {
             isBurgerMenuVisible && (
-              <div className='cart'>
-                <BsBag size={25} /><sup>(1)</sup>
-              </div>
+              <Cartwidget/>
             )
           }
           <Navbar.Toggle aria-controls="offcanvasNavbar-expand-lg" className='burger-icon' />
