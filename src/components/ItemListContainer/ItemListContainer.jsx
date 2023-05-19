@@ -1,9 +1,9 @@
 
 
-const ItemListContainer = (props) => {
+const ItemListContainer = ({description}) => {
   return (
     <div>
-      <h1>{props.description}</h1>
+      <h1>{description}</h1>
     </div>
   )
 }
