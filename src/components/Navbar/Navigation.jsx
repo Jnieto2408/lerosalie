@@ -3,12 +3,12 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import logo from "../../assets/logo.svg"
-import "./header.css"
+import "./navigation.css"
 import { BsWhatsapp, BsTiktok, BsInstagram } from "react-icons/bs";
 import { useState, useEffect } from 'react';
 import Cartwidget from '../Cartwidget/Cartwidget';
 
-function Header() {
+function Navigation() {
   const [isBurgerMenuVisible, setIsBurgerMenuVisible] = useState(null);
   useEffect(() => {
     const handleResize = () => {
@@ -80,4 +80,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Navigation;

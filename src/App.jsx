@@ -1,12 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
-import Header from './components/Header/Header';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import Navigation from './components/Navbar/Navigation';
 
 function App() {
   return (
     <>
-      <Header/>
+      <Navigation/>
       <ItemListContainer description="Item #1"/>
     </>
   )
