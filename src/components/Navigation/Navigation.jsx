@@ -31,7 +31,7 @@ function Navigation() {
               <CartWidget/>
               )
           }
-          <Navbar.Brand href="#home"><img src={logo} alt="LeRosalie Logo" className='logo-rosalie'></img></Navbar.Brand>
+          <Navbar.Brand href="/"><img src={logo} alt="LeRosalie Logo" className='logo-rosalie'></img></Navbar.Brand>
           <Navbar.Toggle aria-controls="offcanvasNavbar-expand-lg" className='burger-icon' />
           <Navbar.Offcanvas
             id="offcanvasNavbar-expand-lg"
@@ -46,11 +46,11 @@ function Navigation() {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className={`justify-content-end  flex-grow-1 pe-3 gap-2 ${isBurgerMenuVisible ? "offcanvas-navbar" : "align-items-center"}`}>
-                <Nav.Link href="/#h">Inicio</Nav.Link>
-                <Nav.Link href="/#h">Nuestras Rosas</Nav.Link>
-                <Nav.Link href="/#h">Quienes Somos</Nav.Link>
-                <Nav.Link href="/#h">Preguntas Frecuentes</Nav.Link>
-                <Nav.Link href="/#h">Contacto</Nav.Link>
+                <Nav.Link href="/">Inicio</Nav.Link>
+                <Nav.Link href="/rosas">Nuestras Rosas</Nav.Link>
+                <Nav.Link href="/nosotros">Quienes Somos</Nav.Link>
+                <Nav.Link href="/q&a">Preguntas Frecuentes</Nav.Link>
+                <Nav.Link href="/contacto">Contacto</Nav.Link>
               {
                 !isBurgerMenuVisible && (
                   <CartWidget/>
