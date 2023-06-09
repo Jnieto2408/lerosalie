@@ -7,6 +7,7 @@ import "./navigation.css"
 import { BsWhatsapp, BsTiktok, BsInstagram } from "react-icons/bs";
 import { useState, useEffect } from 'react';
 import CartWidget from '../CartWidget/CartWidget';
+import { Link } from 'react-router-dom';
 
 function Navigation() {
   const [isBurgerMenuVisible, setIsBurgerMenuVisible] = useState(null);
@@ -31,7 +32,7 @@ function Navigation() {
               <CartWidget/>
               )
           }
-          <Navbar.Brand href="/"><img src={logo} alt="LeRosalie Logo" className='logo-rosalie'></img></Navbar.Brand>
+          <Link to="/"><img src={logo} alt="LeRosalie Logo" className='logo-rosalie'></img></Link>
           <Navbar.Toggle aria-controls="offcanvasNavbar-expand-lg" className='burger-icon' />
           <Navbar.Offcanvas
             id="offcanvasNavbar-expand-lg"
@@ -45,12 +46,12 @@ function Navigation() {
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <Nav className={`justify-content-end  flex-grow-1 pe-3 gap-2 ${isBurgerMenuVisible ? "offcanvas-navbar" : "align-items-center"}`}>
-                <Nav.Link href="/">Inicio</Nav.Link>
-                <Nav.Link href="/rosas">Nuestras Rosas</Nav.Link>
-                <Nav.Link href="/nosotros">Quienes Somos</Nav.Link>
-                <Nav.Link href="/q&a">Preguntas Frecuentes</Nav.Link>
-                <Nav.Link href="/contacto">Contacto</Nav.Link>
+              <Nav className={`justify-content-end  flex-grow-1 pe-3 gap-3 ${isBurgerMenuVisible ? "offcanvas-navbar" : "align-items-center"}`}>
+                <Link to="/" className='links'>Inicio</Link>
+                <Link to="/rosas" className='links'>Nuestras Rosas</Link>
+                <Link to="/nosotros" className='links'>Quienes Somos</Link>
+                <Link to="/q&a" className='links'>Preguntas Frecuentes</Link>
+                <Link to="/contacto" className='links'>Contacto</Link>
               {
                 !isBurgerMenuVisible && (
                   <CartWidget/>

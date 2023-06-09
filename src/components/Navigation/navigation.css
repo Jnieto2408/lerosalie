@@ -11,14 +11,22 @@
     }
 }
 
-.offcanvas-navbar .nav-link {
+.links {
+    text-decoration: none;
+    color: white;
+    padding: 4px;
+}
+
+.offcanvas-navbar .links {
+    color: black;
     padding: 0.5rem;
     margin: 0.5rem;
     border-bottom: 1px gray solid;
 }
 
-.nav-link:hover {
+.links:hover {
     color: white;
     background-color: red;
+    text-decoration: none;
 }
 
