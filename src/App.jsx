@@ -7,6 +7,7 @@ import Nosotros from './components/Nosotros/Nosotros';
 import Preguntas from './components/Preguntas/Preguntas';
 import Contacto from './components/Contacto/Contacto';
 import NuestrasRosas from './components/NuestrasRosas/NuestrasRosas';
+import Footer from './components/Footer/Footer';
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/q&a" element={<Preguntas/>}/>
           <Route path="/contacto" element={<Contacto/>}/>
         </Routes>
+        <Footer/>
     </BrowserRouter>
   )
 }
