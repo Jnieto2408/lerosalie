@@ -3,7 +3,7 @@ import './App.css'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Navigation from './components/Navigation/Navigation';
 
-function App() {
+const App = () => {
   return (
     <>
       <Navigation/>

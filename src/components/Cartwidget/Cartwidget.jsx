@@ -1,7 +1,7 @@
 import "./cartwidget.css"
 import { BsBag } from "react-icons/bs";
 
-const Cartwidget = () => {
+const CartWidget = () => {
   return (
     <div className='cart'>
         <BsBag size={25} /><sup>(1)</sup>
@@ -9,4 +9,4 @@ const Cartwidget = () => {
   )
 }
 
-export default Cartwidget
+export default CartWidget

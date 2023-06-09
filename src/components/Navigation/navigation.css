@@ -17,7 +17,8 @@
     border-bottom: 1px gray solid;
 }
 
-.offcanvas-navbar .nav-link:hover {
-    background-color: red;
+.nav-link:hover {
     color: white;
+    background-color: red;
 }
+

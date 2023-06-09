@@ -6,7 +6,7 @@ import logo from "../../assets/logo.svg"
 import "./navigation.css"
 import { BsWhatsapp, BsTiktok, BsInstagram } from "react-icons/bs";
 import { useState, useEffect } from 'react';
-import Cartwidget from '../Cartwidget/Cartwidget';
+import CartWidget from '../CartWidget/CartWidget';
 
 function Navigation() {
   const [isBurgerMenuVisible, setIsBurgerMenuVisible] = useState(null);
@@ -28,7 +28,7 @@ function Navigation() {
         <Container className='d-flex justify-content-around align-items-center'>
           {
             isBurgerMenuVisible && (
-              <Cartwidget/>
+              <CartWidget/>
               )
           }
           <Navbar.Brand href="#home"><img src={logo} alt="LeRosalie Logo" className='logo-rosalie'></img></Navbar.Brand>
@@ -45,7 +45,7 @@ function Navigation() {
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <Nav className={`justify-content-end  flex-grow-1 pe-3 ${isBurgerMenuVisible ? "offcanvas-navbar" : "align-items-center"}`}>
+              <Nav className={`justify-content-end  flex-grow-1 pe-3 gap-2 ${isBurgerMenuVisible ? "offcanvas-navbar" : "align-items-center"}`}>
                 <Nav.Link href="/#h">Inicio</Nav.Link>
                 <Nav.Link href="/#h">Nuestras Rosas</Nav.Link>
                 <Nav.Link href="/#h">Quienes Somos</Nav.Link>
@@ -53,7 +53,7 @@ function Navigation() {
                 <Nav.Link href="/#h">Contacto</Nav.Link>
               {
                 !isBurgerMenuVisible && (
-                  <Cartwidget/>
+                  <CartWidget/>
                 )
               }
               </Nav>
