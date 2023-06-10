@@ -8,6 +8,7 @@ import Preguntas from './components/Preguntas/Preguntas';
 import Contacto from './components/Contacto/Contacto';
 import NuestrasRosas from './components/NuestrasRosas/NuestrasRosas';
 import Footer from './components/Footer/Footer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<ItemListContainer/>}/>
           <Route path="/productos/:categoryId" element={<ItemListContainer/>}/>
+          <Route path="/detail/:itemId" element={<ItemDetailContainer/>}/>
           <Route path="/rosas" element={<NuestrasRosas/>}/>
           <Route path="/nosotros" element={<Nosotros/>}/>
           <Route path="/q&a" element={<Preguntas/>}/>
