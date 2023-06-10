@@ -14,7 +14,7 @@ const Item = ({name, image, description, price, category, id}) => {
             </Card.Body>
             <Card.Footer className="d-flex gap-4 justify-content-center">
                 <p>Precio: <b>${price}</b></p>
-          <Link to={`/detail/${id}`}><Button>Ver mas</Button></Link>
+          <Link to={`/item/${id}`}><Button>Ver mas</Button></Link>
             </Card.Footer>
         </Card>
     </div>
