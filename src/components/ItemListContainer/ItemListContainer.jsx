@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import ItemList from '../ItemList/ItemList';
 import { pedirDatos } from '../../helpers/pedirDatos';
 import { useParams } from 'react-router-dom';
+import CategoryButton from '../CategoryButton/CategoryButton';
 
 
 
@@ -22,11 +23,12 @@ function ItemListContainer() {
       .catch((err) => {
         console.log(err)
       })
-  }, [])
+  }, [categoryId])
 
   return (
 
     <div>
+        <CategoryButton/>
         <ItemList productos={productos}/>
     </div>
     
