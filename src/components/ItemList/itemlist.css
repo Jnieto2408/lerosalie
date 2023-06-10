@@ -1,13 +1,8 @@
-.cardContainer{
+.cardContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 4rem;
     padding: 4rem;
-}
-
-.initialCard{
-    max-width: 18rem;
-    min-width: 18rem;
 }
