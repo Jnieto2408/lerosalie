@@ -1,8 +1,9 @@
 import { Button } from "react-bootstrap"
 import { useNavigate } from "react-router-dom"
+import ItemCount from "../ItemCount/ItemCount"
 
 
-const ItemDetail = ({name, category, image, description, price}) => {
+const ItemDetail = ({name, category, image, description, price, stock}) => {
 
   const navigate = useNavigate()
   const handleVolver = () => {
@@ -16,6 +17,8 @@ const ItemDetail = ({name, category, image, description, price}) => {
       <small>Category: {category}</small>
       <p>{description}</p>
       <p>Precio: ${price}</p>
+        <ItemCount max={stock} />
+        <hr/>
         <Button className="btn btn-primary" onClick={handleVolver}>Volver</Button>
     </div>
   )
