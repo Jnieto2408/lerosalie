@@ -1,3 +1,8 @@
 .cart {
     color: white;
+    text-decoration: none;
+}
+.cart:hover{
+    color: red;
+    text-decoration: none;
 }
