@@ -6,17 +6,20 @@ import { Link } from "react-router-dom"
 
 const Cart = () => {
     const {cart, emptyCart, totalCart, removerItem} = useContext(CartContext)
-  return (
-    <div className="container my-5">
-      {
-        cart.length === 0
-        ? <>
+
+    if (cart.length === 0){
+      return(
+        <div className="container my-5">
             <h2>Tu carrito esta vacio</h2>
             <hr/>
             <p>Vuelve al inicio</p>
             <Link to="/" className="btn btn-primary">Volver</Link>
-        </>
-        :
+        </div>
+      )
+    }
+  return (
+    <div className="container my-5">
+      {
         <>
           <h2>Tu compra</h2>
           <hr/>
