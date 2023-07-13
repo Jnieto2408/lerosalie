@@ -27,16 +27,26 @@ const ItemDetail = ({id, name, category, image, description, price, stock}) => {
   }
   return (
     <div>
-      <h2>{name}</h2>
-      <img src={image}/>
-      <br/>
-      <small>Category: {category}</small>
-      <p>{description}</p>
-      <p>Precio: ${price}</p>
+
       {
-        !isInCart(id)
-          ?<ItemCount max={stock} cantidad={cantidad} setCantidad={setCantidad} onAdd={handleAgregar}/>
-          :<Link to={"/cart"} className="btn btn-success">Terminar mi compra</Link>
+        name == undefined
+        ?
+          <h2>Este item no se encuentra disponible</h2>
+        :
+          <>
+            <h2>{name}</h2>
+            <img src={image}/>
+            <br/>
+            <small>Category: {category}</small>
+            <p>{description}</p>
+            <p>Precio: ${price}</p>
+            {
+              !isInCart(id)
+                ?<ItemCount max={stock} cantidad={cantidad} setCantidad={setCantidad} onAdd={handleAgregar}/>
+                :<Link to={"/cart"} className="btn btn-success">Terminar mi compra</Link>
+    
+            }
+          </>
 
       }
         <hr/>
